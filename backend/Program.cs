@@ -10,7 +10,7 @@ app.Run();
 
 string Hell()
 {
-    System.IO.File.ReadAllText("file.txt");
-    var message = "Hell";
+
+    var message = System.IO.File.ReadAllText("./file.txt");
     return message + "!";
 }
