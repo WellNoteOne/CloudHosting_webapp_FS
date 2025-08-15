@@ -15,10 +15,10 @@ string Hell()
     //Short way
     var helloPath = Path.Combine(Directory.GetCurrentDirectory(), "file.txt");
 
-    // print to console path of the file
+    // print to console absolute path of the file
     Console.WriteLine($"Reading 1st hello from: {filePath}");
-    Console.WriteLine($"Reading 2nd hello from: {helloPath}");
+    Console.WriteLine($"Reading path from short way: {helloPath}");
 
     var message = File.ReadAllText(helloPath);
-    return message + "!";
+    return "Read " + message + "from File";
 }
