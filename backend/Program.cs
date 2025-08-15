@@ -22,3 +22,5 @@ string Hell()
     var message = File.ReadAllText(helloPath);
     return "Read " + message + "from File";
 }
+
+// deploying with az webapp up --name mega-best -g test1 --location westeurope --sku B1 --os-type Linux
