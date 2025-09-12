@@ -55,6 +55,11 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: dotnet publish
         run: dotnet publish -c Release -o ./publish
 
