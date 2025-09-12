@@ -53,10 +53,14 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release --project ./backend/backend.csproj
+        run: |
+          cd backend
+          dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish --configuration Release --project ./backend/backend.csproj -o ./publish
+        run: |
+          cd backend
+          dotnet publish --configuration Release -o ../publish
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
