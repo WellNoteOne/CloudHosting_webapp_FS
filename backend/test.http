@@ -1,7 +1,9 @@
-GET http://localhost:5209
+GET http://localhost:5000
 ###
-GET http://localhost:5209/hell
+GET http://localhost:5000/hell
 ###
 GET http://mega-best.azurewebsites.net
 ###
 GET http://mega-best.azurewebsites.net/hell
+###
+GET https://api.hel.fi/linkedevents/v1/event

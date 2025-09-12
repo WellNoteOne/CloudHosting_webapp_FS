@@ -1,10 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+string path = Directory.GetCurrentDirectory();
+Console.WriteLine("Program strarts with this directory {0}" + path);
+
 string Hell()
 {
     //First way
     var helloFolder = new DirectoryInfo(Directory.GetCurrentDirectory());
+    Console.WriteLine("Step 1");
     var filePath = Path.Combine(helloFolder.FullName, "file.txt");
 
     //Short way
@@ -17,6 +21,7 @@ string Hell()
     var message = File.ReadAllText(filePath);
     return "Read from File " + message;
 }
+
 
 app.MapGet("/", () => "Hello World!"); // Using anonomous functions
 app.MapGet("/hell", Hell);

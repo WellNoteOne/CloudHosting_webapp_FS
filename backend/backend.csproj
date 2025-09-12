@@ -6,4 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+<ItemGroup>
+  <None Update="*.txt" CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
 </Project>
