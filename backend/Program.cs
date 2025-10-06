@@ -1,3 +1,11 @@
+Console.WriteLine(@$"Current Directory:
+     {Directory.GetCurrentDirectory()}");
+
+Console.WriteLine(@$"Executing Assembly: 
+    {Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)}");
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -19,7 +27,7 @@ string Hell()
     Console.WriteLine($"Reading path from short way: {helloPath}");
 
     var message = File.ReadAllText(filePath);
-    return "Read from File " + message;
+    return "Read from File ()" + message;
 }
 
 
